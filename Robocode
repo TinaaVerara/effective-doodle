@@ -1,0 +1,19 @@
+import robocode.*;
+
+public class MyRobot extends Robot {
+
+    public void run() {
+        while (true) {
+            ahead(100); // Move forward 100 units
+            turnRight(90); // Turn right 90 degrees
+        }
+    }
+
+    public void onScannedRobot(ScannedRobotEvent event) {
+        fire(1); // Fire a bullet with power 1
+    }
+
+    public void onHitByBullet(HitByBulletEvent event) {
+        turnLeft(90); // Turn left 90 degrees when hit by a bullet
+    }
+}
